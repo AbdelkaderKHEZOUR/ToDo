@@ -1,66 +1,92 @@
 :root{
-    --gradient: linear-gradient(to right, #f0876d, #feb47b);
-    --black: #001747;
-   
+  --gradient: linear-gradient(to right, #f0876d, #feb47b);
+  --black: #001747;
+ 
 }
 body{
-    background: var(--gradient);
-    font-family: poppins, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-direction: column;
-    height: 100vh;
-    color: #333;    
+  background: var(--gradient);
+  font-family: poppins, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  color: #333;    
 }
 .add_task{
-    color: #efd29bce;
-    background: var(--black);
-    font-size: 1.1rem;
-    padding: 0.7rem 1.5rem;
-    border-radius: 0.3rem;
-    border: none;
-    cursor: pointer;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    top: 0;
+  color: #efd29bce;
+  background: var(--black);
+  font-size: 1.1rem;
+  padding: 0.7rem 1.5rem;
+  border-radius: 0.3rem;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
 }
 .Tasks{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    border-radius: 2rem;
-    background: #ffffffce;
-    padding: 2rem;
-    height: 50%;
-    width: 60%;
-    box-shadow: 0 1rem 2rem 1rem  rgba(0, 0, 0, 0.1);
-    max-width: 30rem;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 2rem;
+  background: #ffffffce;
+  padding: 2rem;
+  height: 50%;
+  width: 60%;
+  box-shadow: 0 1rem 2rem 1rem  rgba(0, 0, 0, 0.1);
+  max-width: 30rem;
+}
 
 h2{
-  text-transform: uppercase;
-  margin: 0;
-  height: 3rem;
-  color : var(--black);
-  text-align: center;
+text-transform: uppercase;
+margin: 0;
+height: 3rem;
+color : var(--black);
+text-align: center;
 }
 input{
-    position: relative;
-    display: flex;
+  position: relative;
+  display: flex;
 }
 
 .task_field{
-    width: 90%;
-    border: 0.05px solid #d2d2d2bf;
-    border-radius: 0.5rem;    
-    padding: 1.25rem ;
-    box-sizing: border-box;
-    font-size: 1rem;
+  width: 90%;
+  border: 0.05px solid #d2d2d2bf;
+  border-radius: 0.5rem;    
+  padding: 1.25rem ;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+.task_input{
+  position: relative;
+}
+
+ul{
+  padding: 0;
+  margin: 0;
+  overflow-y: scroll;
+}
+li{
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding: 1.3rem;
+}
+
+#to-DoList p{
+  color: #2e2c2f;
+}
+.checked{
+  display: flex;
+  text-decoration: line-through;
   }
-  .task_input{
-    position: relative;
-  }
+input[type="checkbox"]{
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 1rem;
+  cursor: pointer;
+}
