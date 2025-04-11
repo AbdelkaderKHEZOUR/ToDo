@@ -84,9 +84,3 @@ li{
   display: flex;
   text-decoration: line-through;
   }
-input[type="checkbox"]{
-  width: 1.5rem;
-  height: 1.5rem;
-  margin-right: 1rem;
-  cursor: pointer;
-}
