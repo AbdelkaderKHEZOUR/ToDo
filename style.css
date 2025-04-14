@@ -1,94 +1,213 @@
-:root{
-  --gradient: linear-gradient(to right, #f0876d, #feb47b);
-  --black: #001747;
- 
+:root {
+  --gradient: linear-gradient(0deg, rgba(0, 110, 100, 100) 0%, #93b0baa4 90%);
+  --dark: #001747;
+  --grey: #b1bacb;
+  --grey-border: rgba(210, 210, 210, 0.75);
+  --grey-light: #eeeeee;
+  --grey-dark: #405175;
+  --blue: #4fbcda;
+  --green: #00d8a7;
+  --white: #ffffff;
 }
-body{
+
+body {
   background: var(--gradient);
-  font-family: poppins, sans-serif;
   margin: 0;
-  padding: 0;
+  height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  flex-direction: column;
-  height: 100vh;
-  color: #333;    
+  font-family: Arial, Helvetica, sans-serif;
 }
-.add_task{
-  color: #efd29bce;
-  background: var(--black);
+
+.btn {
+  color: var(--white);
   font-size: 1.1rem;
   padding: 0.7rem 1.5rem;
   border-radius: 0.3rem;
+  background-color: var(--blue);
   border: none;
-  cursor: pointer;
   position: absolute;
-  right: 0;
-  bottom: 0;
-  top: 0;
+  right: 0.5rem;
+  bottom: 0.5rem;
 }
-.Tasks{
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+.todo {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   border-radius: 2rem;
-  background: #ffffffce;
-  padding: 2rem;
-  height: max-content;
+  background: var(--white);
+  padding: 3rem;
+  height: 60%;
   width: 60%;
-  box-shadow: 0 1rem 2rem 1rem  rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1rem 3rem 1rem rgba(0, 23, 71, 0.15);
   max-width: 30rem;
 }
 
-h2{
-  text-transform: uppercase;
-  margin: 0;
-  height: 3rem;
-  color : var(--black);
-  text-align: center;
+.logo {
+  display: flex;
+  justify-content: center;
 }
-input{
+
+img {
+  width: 3rem;
+}
+
+h2 {
+  text-transform: uppercase;
+  height: 3rem;
+  color: var(--dark);
+  text-align: center;
+  padding-bottom: 0.5rem;
+}
+
+.input {
   position: relative;
   display: flex;
 }
 
-.task_field{
-  width: 90%;
-  border: 0.05px solid #d2d2d2bf;
-  border-radius: 0.5rem;    
-  padding: 1.25rem ;
-  box-sizing: border-box;
+.input-field {
+  width: 100%;
+  border: 0.06rem solid #d2d2d2bf;
+  border-radius: 0.5rem;
+  padding: 1.25rem;
   font-size: 1rem;
 }
-.task_input{
-  position: relative;
+
+input[type="text"]::placeholder {
+  color: var(--grey);
 }
 
-ul{
+.todo-container {
+  display: flex;
+  gap: 1rem;
+}
+
+ul {
   padding: 0;
   margin: 0;
+  overflow-y: scroll;
 }
-li{
+
+li {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 1.2rem;
   padding: 1.3rem;
-  width: 100%;
-  justify-content: space-between;
 }
-.checked{
+
+#todoList p {
+  display: flex;
+  gap: 1rem;
+  color: var(--dark);
+  align-items: center;
+}
+
+#todoList .disabled {
+  color: #8f98a8;
+}
+
+.disabled {
   display: flex;
   text-decoration: line-through;
-  }
-.removeTask{
-  color: red;
-  background-color: transparent;
-  display: inline-block;
-  border: none;
 }
-.editBtn{
-  background-color: transparent;
-  display: inline;
+
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+
+input[type="checkbox"]::before {
+  content: "\2713";
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  font-size: 1.7rem;
+  text-align: center;
+  border: 0.06rem solid var(--grey-border);
+  border-radius: 50%;
+  color: transparent;
+}
+
+input[type="checkbox"]:checked::before {
+  color: var(--white);
+  background-color: var(--green);
+  border: 0.06rem solid var(--green);
+  border-radius: 50%;
+}
+
+.counter {
+  border: 0.06rem solid var(--grey-light);
+}
+
+.counter-container {
+  height: 2rem;
+  display: flex;
+  justify-content: space-between;
+  color: var(--grey);
+}
+
+.counter-container p {
+  align-self: center;
+}
+
+.counter-container button {
   border: none;
+  background-color: transparent;
+  color: var(--grey);
+  font-size: 1rem;
+}
+
+.footer {
+  display: flex;
+  gap: 1.8rem;
+  background-color: var(--white);
+  padding: 1.2rem;
+  border-radius: 0.5rem;
+}
+
+.made-by,
+.author {
+  font-size: 0.9rem;
+}
+
+.made-by {
+  color: var(--grey-dark);
+}
+
+.author {
+  color: var(--blue);
+  font-weight: bold;
+}
+
+.scroll {
+  height: 15rem;
+  scrollbar-width: thin;
+}
+
+.scroll::-webkit-scrollbar {
+  width: 0.6rem;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+  background-color: var(--blue);
+  border-radius: 0.5rem;
+}
+
+.scroll::-webkit-scrollbar-track {
+  display: none;
 }
