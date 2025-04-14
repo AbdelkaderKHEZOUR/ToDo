@@ -149,7 +149,12 @@ input[type="checkbox"]:checked::before {
   border: 0.06rem solid var(--green);
   border-radius: 50%;
 }
-
+.edit-note {
+  color: rgba(186, 177, 12, 0.799);
+  text-align: center;
+  padding-top: 0.5rem;
+  font-size: 0.8rem;
+}
 .counter {
   border: 0.06rem solid var(--grey-light);
 }
@@ -172,12 +177,14 @@ input[type="checkbox"]:checked::before {
   font-size: 1rem;
 }
 
+#deleteButton {
+  color: hsla(1, 100%, 70%, 0.849);
+}
+
 .footer {
-  display: flex;
-  gap: 1.8rem;
   background-color: var(--white);
-  padding: 1.2rem;
-  border-radius: 0.5rem;
+  padding: 1rem;
+  border-radius: 1.5rem;
 }
 
 .made-by,
@@ -189,7 +196,7 @@ input[type="checkbox"]:checked::before {
   color: var(--grey-dark);
 }
 
-.author {
+.developer {
   color: var(--blue);
   font-weight: bold;
 }
